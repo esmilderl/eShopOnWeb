@@ -8,13 +8,10 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2022-09-01' = {
   name: appServicePlanName
   location: location
   properties: {
-    reserved: false
+    reserved: true
   }
-   sku: {
+  sku: {
     name: sku
-    tier: 'Free'
-    size: 'F1'
-    capacity: 1
   }
 }
 resource appService 'Microsoft.Web/sites@2022-09-01' = {
